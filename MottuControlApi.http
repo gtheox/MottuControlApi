@@ -1,0 +1,64 @@
+### GET todos os pátios
+GET https://localhost:5001/api/patio
+
+### GET pátio por ID
+GET https://localhost:5001/api/patio/1
+
+### POST novo pátio
+POST https://localhost:5001/api/patio
+Content-Type: application/json
+
+{
+  "nome": "Pátio Leste"
+}
+
+### GET todas as motos
+GET https://localhost:5001/api/moto
+
+### GET moto por ID
+GET https://localhost:5001/api/moto/1
+
+### POST nova moto
+POST https://localhost:5001/api/moto
+Content-Type: application/json
+
+{
+  "modelo": "Yamaha XTZ 150",
+  "placa": "MOT1234",
+  "status": "Disponível",
+  "patioId": 1
+}
+
+### GET sensores por tipo
+GET https://localhost:5001/api/sensor/buscar?tipo=GPS
+
+### POST novo sensor
+POST https://localhost:5001/api/sensor
+Content-Type: application/json
+
+{
+  "nome": "Sensor GPS 001",
+  "tipo": "GPS",
+  "motoId": 1
+}
+
+### GET imagens por pátio
+GET https://localhost:5001/api/imagem/patio/1
+
+### POST nova imagem
+POST https://localhost:5001/api/imagem
+Content-Type: application/json
+
+{
+  "caminhoImagem": "https://cdn.mottu.com/imagens/patio1.jpg",
+  "patioId": 1
+}
+
+### POST novo status para moto
+POST https://localhost:5001/api/statusmonitoramento
+Content-Type: application/json
+
+{
+  "status": "Alugada",
+  "motoId": 1
+}
