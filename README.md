@@ -64,17 +64,19 @@ Esta aplicação foi construída para otimizar o monitoramento das motos nas fil
 ````bash
 git clone https://github.com/seu-usuario/MottuControlApi.git
 cd MottuControlApi
+````
 
 ### 3. Restaurar dependências
 
 ```bash
 dotnet restore
+````
 
 ### 4. Aplicar migrations no banco Oracle
 
 ```bash
 dotnet ef database update
-
+````
 
 ## ▶️ Execução
 
@@ -82,11 +84,13 @@ dotnet ef database update
 
 ```bash
 dotnet run
+````
 
 Acesse a documentação interativa:
 
 ```bash
 https://localhost:5001/swagger
+````
 
 ## 📡 Rotas da API
 ###Você pode testar com o arquivo MottuControlApi.http ou via Swagger.
