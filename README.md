@@ -106,4 +106,4 @@ https://localhost:5001/swagger
 | Gabriel Teodoro Gonçalves Rosa | 555962 | [gtheox](https://github.com/gtheox)             |
 | Luka Shibuya                   | 558123 | [lukashibuya](https://github.com/lukashibuya)   |
 | Eduardo Giovannini             | 555030 | [DuGiovannini](https://github.com/DuGiovannini) |
-````
+
