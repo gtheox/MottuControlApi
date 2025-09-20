@@ -1,30 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gteod\\OneDrive\\Área de Trabalho\\Challenge 2025\\Devops\\MottuControlApi.csproj": {}
+    "/Users/gabrielteodoro/Downloads/DevopsChallenge-main/MottuControlApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gteod\\OneDrive\\Área de Trabalho\\Challenge 2025\\Devops\\MottuControlApi.csproj": {
+    "/Users/gabrielteodoro/Downloads/DevopsChallenge-main/MottuControlApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gteod\\OneDrive\\Área de Trabalho\\Challenge 2025\\Devops\\MottuControlApi.csproj",
+        "projectUniqueName": "/Users/gabrielteodoro/Downloads/DevopsChallenge-main/MottuControlApi.csproj",
         "projectName": "MottuControlApi",
-        "projectPath": "C:\\Users\\gteod\\OneDrive\\Área de Trabalho\\Challenge 2025\\Devops\\MottuControlApi.csproj",
-        "packagesPath": "C:\\Users\\gteod\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gteod\\OneDrive\\Área de Trabalho\\Challenge 2025\\Devops\\obj\\",
+        "projectPath": "/Users/gabrielteodoro/Downloads/DevopsChallenge-main/MottuControlApi.csproj",
+        "packagesPath": "/Users/gabrielteodoro/.nuget/packages/",
+        "outputPath": "/Users/gabrielteodoro/Downloads/DevopsChallenge-main/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\gteod\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/gabrielteodoro/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net9.0"
+          "net8.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net9.0": {
-            "targetAlias": "net9.0",
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {}
           }
         },
@@ -37,34 +37,29 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.200"
+        }
       },
       "frameworks": {
-        "net9.0": {
-          "targetAlias": "net9.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "dependencies": {
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
-              "version": "[9.0.5, )"
+              "version": "[8.0.5, )"
             },
-            "Microsoft.EntityFrameworkCore.Design": {
+            "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[9.0.5, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "target": "Package",
-              "version": "[8.0.0, )"
+              "version": "[8.0.5, )"
             },
             "Oracle.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[9.23.80, )"
+              "version": "[8.21.140, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[8.1.2, )"
+              "version": "[6.4.0, )"
             }
           },
           "imports": [
@@ -86,7 +81,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.414/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
