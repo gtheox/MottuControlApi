@@ -10,7 +10,6 @@ namespace MottuControlApi.Data
         public DbSet<Moto> Motos { get; set; }
         public DbSet<Patio> Patios { get; set; }
         public DbSet<SensorIoT> Sensores { get; set; }
-        public DbSet<ImagemPatio> ImagensPatio { get; set; }
         public DbSet<StatusMonitoramento> StatusMonitoramentos { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -37,16 +36,6 @@ namespace MottuControlApi.Data
                 .HasOne(s => s.Moto)
                 .WithMany(m => m.Sensores)
                 .HasForeignKey(s => s.MotoId)
-                .OnDelete(DeleteBehavior.Restrict);
-
-            // Configuração da tabela ImagemPatio
-            modelBuilder.Entity<ImagemPatio>()
-                .HasKey(i => i.Id);
-
-            modelBuilder.Entity<ImagemPatio>()
-                .HasOne(i => i.Patio)
-                .WithMany(p => p.Imagens)
-                .HasForeignKey(i => i.PatioId)
                 .OnDelete(DeleteBehavior.Restrict);
 
             // Configuração da tabela StatusMonitoramento

@@ -7,7 +7,7 @@ namespace MottuControlApi.Services.Contracts
 {
     public interface IMotoService
     {
-        Task<PagedList<MotoDto>> GetAllAsync(PaginationParams paginationParams);
+        Task<PagedList<MotoDto>?> GetAllAsync(PaginationParams paginationParams); // <--- MUDANÇA AQUI
         Task<MotoDto?> GetByIdAsync(int id);
         Task<IEnumerable<MotoDto>> GetByPlacaAsync(string placa);
         Task<IEnumerable<MotoDto>> GetByStatusAsync(string status);

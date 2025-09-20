@@ -1,0 +1,347 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MottuControlApi</name>
+    </assembly>
+    <members>
+        <member name="M:MottuControlApi.Controllers.MotoController.GetAll(MottuControlApi.Shared.Pagination.PaginationParams)">
+            <summary>
+            Busca uma lista paginada de motos.
+            </summary>
+            <param name="paginationParams">Parâmetros de paginação (PageNumber, PageSize).</param>
+            <returns>Uma lista paginada de motos.</returns>
+            <response code="200">Retorna a lista de motos com cabeçalho de paginação.</response>
+            <response code="404">Se nenhuma moto for encontrada.</response>
+        </member>
+        <member name="M:MottuControlApi.Controllers.MotoController.GetById(System.Int32)">
+            <summary>
+            Busca uma moto específica pelo seu ID.
+            </summary>
+            <param name="id">O ID da moto a ser buscada.</param>
+            <returns>Os detalhes da moto encontrada.</returns>
+            <response code="200">Retorna a moto encontrada.</response>
+            <response code="404">Se a moto com o ID especificado não for encontrada.</response>
+        </member>
+        <member name="M:MottuControlApi.Controllers.MotoController.Create(MottuControlApi.Dtos.Moto.CreateMotoDto)">
+            <summary>
+            Cria uma nova moto.
+            </summary>
+            <param name="createDto">Dados para a criação da nova moto.</param>
+            <returns>A moto recém-criada.</returns>
+            <response code="201">Retorna a moto recém-criada.</response>
+            <response code="400">Se os dados fornecidos forem inválidos.</response>
+        </member>
+        <member name="M:MottuControlApi.Controllers.MotoController.Update(System.Int32,MottuControlApi.Dtos.Moto.UpdateMotoDto)">
+            <summary>
+            Atualiza os dados de uma moto existente.
+            </summary>
+            <param name="id">ID da moto a ser atualizada.</param>
+            <param name="updateDto">Dados da moto para atualização.</param>
+            <returns>A moto com os dados atualizados.</returns>
+            <response code="200">Retorna a moto atualizada.</response>
+            <response code="400">Se os dados fornecidos forem inválidos.</response>
+            <response code="404">Se a moto não for encontrada.</response>
+        </member>
+        <member name="M:MottuControlApi.Controllers.MotoController.Delete(System.Int32)">
+            <summary>
+            Deleta uma moto pelo ID.
+            </summary>
+            <param name="id">ID da moto a ser deletada.</param>
+            <response code="204">Moto deletada com sucesso.</response>
+            <response code="404">Se a moto não for encontrada.</response>
+        </member>
+        <member name="M:MottuControlApi.Controllers.PatioController.GetAll(MottuControlApi.Shared.Pagination.PaginationParams)">
+            <summary>
+            Busca uma lista paginada de pátios.
+            </summary>
+            <param name="paginationParams">Parâmetros de paginação (PageNumber, PageSize).</param>
+            <returns>Uma lista paginada de pátios.</returns>
+            <response code="200">Retorna a lista de pátios com cabeçalho de paginação.</response>
+            <response code="404">Se nenhum pátio for encontrado.</response>
+        </member>
+        <member name="M:MottuControlApi.Controllers.PatioController.GetById(System.Int32)">
+            <summary>
+            Busca um pátio específico pelo seu ID.
+            </summary>
+            <param name="id">O ID do pátio a ser buscado.</param>
+            <returns>Os detalhes do pátio encontrado.</returns>
+            <response code="200">Retorna o pátio encontrado.</response>
+            <response code="404">Se o pátio com o ID especificado não for encontrado.</response>
+        </member>
+        <member name="M:MottuControlApi.Controllers.PatioController.Create(MottuControlApi.Dtos.Patio.CreatePatioDto)">
+            <summary>
+            Cria um novo pátio.
+            </summary>
+            <param name="createDto">Dados para a criação do novo pátio.</param>
+            <returns>O pátio recém-criado.</returns>
+            <response code="201">Retorna o pátio recém-criado.</response>
+            <response code="400">Se os dados fornecidos forem inválidos.</response>
+        </member>
+        <member name="M:MottuControlApi.Controllers.PatioController.Update(System.Int32,MottuControlApi.Dtos.Patio.UpdatePatioDto)">
+            <summary>
+            Atualiza os dados de um pátio existente.
+            </summary>
+            <param name="id">ID do pátio a ser atualizado.</param>
+            <param name="updateDto">Dados do pátio para atualização.</param>
+            <returns>O pátio com os dados atualizados.</returns>
+            <response code="200">Retorna o pátio atualizado.</response>
+            <response code="400">Se os dados fornecidos forem inválidos.</response>
+            <response code="404">Se o pátio não for encontrado.</response>
+        </member>
+        <member name="M:MottuControlApi.Controllers.PatioController.Delete(System.Int32)">
+            <summary>
+            Deleta um pátio pelo ID.
+            </summary>
+            <param name="id">ID do pátio a ser deletado.</param>
+            <response code="204">Pátio deletado com sucesso.</response>
+            <response code="404">Se o pátio não for encontrado.</response>
+        </member>
+        <member name="M:MottuControlApi.Controllers.SensorController.GetAll(MottuControlApi.Shared.Pagination.PaginationParams)">
+            <summary>
+            Busca uma lista paginada de sensores.
+            </summary>
+            <param name="paginationParams">Parâmetros de paginação (PageNumber, PageSize).</param>
+            <returns>Uma lista paginada de sensores.</returns>
+            <response code="200">Retorna a lista de sensores com cabeçalho de paginação.</response>
+            <response code="404">Se nenhum sensor for encontrado.</response>
+        </member>
+        <member name="M:MottuControlApi.Controllers.SensorController.GetById(System.Int32)">
+            <summary>
+            Busca um sensor específico pelo seu ID.
+            </summary>
+            <param name="id">O ID do sensor a ser buscado.</param>
+            <returns>Os detalhes do sensor encontrado.</returns>
+            <response code="200">Retorna o sensor encontrado.</response>
+            <response code="404">Se o sensor com o ID especificado não for encontrado.</response>
+        </member>
+        <member name="M:MottuControlApi.Controllers.SensorController.GetByTipo(System.String)">
+            <summary>
+            Busca sensores por tipo.
+            </summary>
+            <param name="tipo">O tipo de sensor a ser buscado (ex: GPS, RFID).</param>
+            <returns>Uma lista de sensores do tipo especificado.</returns>
+            <response code="200">Retorna a lista de sensores encontrados.</response>
+        </member>
+        <member name="M:MottuControlApi.Controllers.SensorController.Create(MottuControlApi.Dtos.Sensor.CreateSensorDto)">
+            <summary>
+            Cria um novo sensor.
+            </summary>
+            <param name="createDto">Dados para a criação do novo sensor.</param>
+            <returns>O sensor recém-criado.</returns>
+            <response code="201">Retorna o sensor recém-criado.</response>
+            <response code="400">Se os dados fornecidos forem inválidos.</response>
+        </member>
+        <member name="M:MottuControlApi.Controllers.SensorController.Update(System.Int32,MottuControlApi.Dtos.Sensor.UpdateSensorDto)">
+            <summary>
+            Atualiza os dados de um sensor existente.
+            </summary>
+            <param name="id">ID do sensor a ser atualizado.</param>
+            <param name="updateDto">Dados do sensor para atualização.</param>
+            <returns>O sensor com os dados atualizados.</returns>
+            <response code="200">Retorna o sensor atualizado.</response>
+            <response code="400">Se os dados fornecidos forem inválidos.</response>
+            <response code="404">Se o sensor não for encontrado.</response>
+        </member>
+        <member name="M:MottuControlApi.Controllers.SensorController.Delete(System.Int32)">
+            <summary>
+            Deleta um sensor pelo ID.
+            </summary>
+            <param name="id">ID do sensor a ser deletado.</param>
+            <response code="204">Sensor deletado com sucesso.</response>
+            <response code="404">Se o sensor não for encontrado.</response>
+        </member>
+        <member name="M:MottuControlApi.Controllers.StatusMonitoramentoController.GetAll(MottuControlApi.Shared.Pagination.PaginationParams)">
+            <summary>
+            Busca uma lista paginada de todos os registros de status.
+            </summary>
+            <param name="paginationParams">Parâmetros de paginação.</param>
+            <returns>Uma lista paginada de registros de status.</returns>
+            <response code="200">Retorna a lista de status com cabeçalho de paginação.</response>
+            <response code="404">Se nenhum registro for encontrado.</response>
+        </member>
+        <member name="M:MottuControlApi.Controllers.StatusMonitoramentoController.GetById(System.Int32)">
+            <summary>
+            Busca um registro de status pelo seu ID.
+            </summary>
+            <param name="id">O ID do registro a ser buscado.</param>
+            <returns>Os detalhes do registro encontrado.</returns>
+            <response code="200">Retorna o registro encontrado.</response>
+            <response code="404">Se o registro com o ID especificado não for encontrado.</response>
+        </member>
+        <member name="M:MottuControlApi.Controllers.StatusMonitoramentoController.GetByMotoId(System.Int32,MottuControlApi.Shared.Pagination.PaginationParams)">
+            <summary>
+            Busca o histórico paginado de status de uma moto específica.
+            </summary>
+            <param name="motoId">O ID da moto para buscar o histórico.</param>
+            <param name="paginationParams">Parâmetros de paginação.</param>
+            <returns>Uma lista paginada do histórico de status da moto.</returns>
+            <response code="200">Retorna o histórico da moto.</response>
+            <response code="404">Se a moto ou o histórico não forem encontrados.</response>
+        </member>
+        <member name="M:MottuControlApi.Controllers.StatusMonitoramentoController.Create(MottuControlApi.Dtos.Status.CreateStatusDto)">
+            <summary>
+            Cria um novo registro de status para uma moto.
+            </summary>
+            <param name="createDto">Dados para a criação do novo registro.</param>
+            <returns>O registro recém-criado.</returns>
+            <response code="201">Retorna o registro recém-criado.</response>
+            <response code="400">Se os dados fornecidos forem inválidos.</response>
+        </member>
+        <member name="M:MottuControlApi.Controllers.StatusMonitoramentoController.Update(System.Int32,MottuControlApi.Dtos.Status.UpdateStatusDto)">
+            <summary>
+            Atualiza um registro de status existente.
+            </summary>
+            <param name="id">ID do registro a ser atualizado.</param>
+            <param name="updateDto">Dados para atualização.</param>
+            <returns>O registro com os dados atualizados.</returns>
+            <response code="200">Retorna o registro atualizado.</response>
+            <response code="400">Se os dados fornecidos forem inválidos.</response>
+            <response code="404">Se o registro não for encontrado.</response>
+        </member>
+        <member name="M:MottuControlApi.Controllers.StatusMonitoramentoController.Delete(System.Int32)">
+            <summary>
+            Deleta um registro de status pelo ID.
+            </summary>
+            <param name="id">ID do registro a ser deletado.</param>
+            <response code="204">Registro deletado com sucesso.</response>
+            <response code="404">Se o registro não for encontrado.</response>
+        </member>
+        <member name="T:MottuControlApi.Dtos.Moto.MotoDto">
+            <summary>
+            Objeto de transferência de dados para representar uma Moto.
+            </summary>
+        </member>
+        <member name="P:MottuControlApi.Dtos.Moto.MotoDto.Id">
+            <summary>
+            ID da moto.
+            </summary>
+        </member>
+        <member name="P:MottuControlApi.Dtos.Moto.MotoDto.Modelo">
+            <summary>
+            Modelo da moto (ex: "Honda Biz 125").
+            </summary>
+        </member>
+        <member name="P:MottuControlApi.Dtos.Moto.MotoDto.Placa">
+            <summary>
+            Placa da moto.
+            </summary>
+        </member>
+        <member name="P:MottuControlApi.Dtos.Moto.MotoDto.Status">
+            <summary>
+            Status atual da moto (ex: "Disponível", "Alugada").
+            </summary>
+        </member>
+        <member name="P:MottuControlApi.Dtos.Moto.MotoDto.PatioId">
+            <summary>
+            ID do pátio onde a moto está alocada.
+            </summary>
+        </member>
+        <member name="P:MottuControlApi.Dtos.Moto.MotoDto.NomePatio">
+            <summary>
+            Nome do pátio para facilitar a visualização.
+            </summary>
+        </member>
+        <member name="P:MottuControlApi.Dtos.Moto.MotoDto.Sensores">
+            <summary>
+            Lista de sensores IoT associados à moto.
+            </summary>
+        </member>
+        <member name="P:MottuControlApi.Dtos.Moto.MotoDto.StatusMonitoramentos">
+            <summary>
+            Histórico de status da moto.
+            </summary>
+        </member>
+        <member name="T:MottuControlApi.Dtos.Patio.PatioDto">
+            <summary>
+            Objeto de transferência de dados para representar um Pátio.
+            </summary>
+        </member>
+        <member name="P:MottuControlApi.Dtos.Patio.PatioDto.Id">
+            <summary>
+            ID do pátio.
+            </summary>
+        </member>
+        <member name="P:MottuControlApi.Dtos.Patio.PatioDto.Nome">
+            <summary>
+            Nome do pátio (ex: "Pátio Central").
+            </summary>
+        </member>
+        <member name="P:MottuControlApi.Dtos.Patio.PatioDto.Motos">
+            <summary>
+            Lista de motos alocadas neste pátio.
+            </summary>
+        </member>
+        <member name="T:MottuControlApi.Dtos.Sensor.SensorDto">
+            <summary>
+            Objeto de transferência de dados para representar um Sensor IoT.
+            </summary>
+        </member>
+        <member name="P:MottuControlApi.Dtos.Sensor.SensorDto.Id">
+            <summary>
+            ID do sensor.
+            </summary>
+        </member>
+        <member name="P:MottuControlApi.Dtos.Sensor.SensorDto.Nome">
+            <summary>
+            Nome do sensor (ex: "Sensor GPS A").
+            </summary>
+        </member>
+        <member name="P:MottuControlApi.Dtos.Sensor.SensorDto.Tipo">
+            <summary>
+            Tipo do sensor (ex: "GPS", "RFID").
+            </summary>
+        </member>
+        <member name="P:MottuControlApi.Dtos.Sensor.SensorDto.MotoId">
+            <summary>
+            ID da moto à qual o sensor está vinculado.
+            </summary>
+        </member>
+        <member name="P:MottuControlApi.Dtos.Sensor.SensorDto.PlacaMoto">
+            <summary>
+            Placa da moto associada para facilitar a visualização.
+            </summary>
+        </member>
+        <member name="T:MottuControlApi.Dtos.Status.StatusDto">
+            <summary>
+            Objeto de transferência de dados para representar um registro de Status.
+            </summary>
+        </member>
+        <member name="P:MottuControlApi.Dtos.Status.StatusDto.Id">
+            <summary>
+            ID do registro de status.
+            </summary>
+        </member>
+        <member name="P:MottuControlApi.Dtos.Status.StatusDto.Status">
+            <summary>
+            Status da moto (ex: "Disponível", "Alugada").
+            </summary>
+        </member>
+        <member name="P:MottuControlApi.Dtos.Status.StatusDto.DataHora">
+            <summary>
+            Data e hora em que o status foi registrado.
+            </summary>
+        </member>
+        <member name="P:MottuControlApi.Dtos.Status.StatusDto.MotoId">
+            <summary>
+            ID da moto associada a este status.
+            </summary>
+        </member>
+        <member name="P:MottuControlApi.Dtos.Status.StatusDto.PlacaMoto">
+            <summary>
+            Placa da moto para facilitar a visualização.
+            </summary>
+        </member>
+        <member name="T:MottuControlApi.Migrations.VersaoFinalRefatorada">
+            <inheritdoc />
+        </member>
+        <member name="M:MottuControlApi.Migrations.VersaoFinalRefatorada.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:MottuControlApi.Migrations.VersaoFinalRefatorada.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:MottuControlApi.Migrations.VersaoFinalRefatorada.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

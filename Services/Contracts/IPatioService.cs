@@ -7,7 +7,7 @@ namespace MottuControlApi.Services.Contracts
 {
     public interface IPatioService
     {
-        Task<PagedList<PatioDto>> GetAllAsync(PaginationParams paginationParams);
+        Task<PagedList<PatioDto>?> GetAllAsync(PaginationParams paginationParams); // <--- MUDANÇA AQUI
         Task<PatioDto?> GetByIdAsync(int id);
         Task<IEnumerable<PatioDto>> GetByNomeAsync(string nome);
         Task<PatioDto> CreateAsync(CreatePatioDto createDto);

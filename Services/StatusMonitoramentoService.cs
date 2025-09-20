@@ -17,7 +17,7 @@ namespace MottuControlApi.Services
             _statusRepository = statusRepository;
         }
 
-        public async Task<PagedList<StatusDto>> GetAllAsync(PaginationParams paginationParams)
+        public async Task<PagedList<StatusDto>?> GetAllAsync(PaginationParams paginationParams)
         {
             var statusList = await _statusRepository.GetAllAsync(paginationParams);
             if (statusList == null || !statusList.Items.Any())
@@ -34,7 +34,7 @@ namespace MottuControlApi.Services
             return status?.ToDto();
         }
 
-        public async Task<PagedList<StatusDto>> GetByMotoIdAsync(int motoId, PaginationParams paginationParams)
+        public async Task<PagedList<StatusDto>?> GetByMotoIdAsync(int motoId, PaginationParams paginationParams)
         {
             var statusList = await _statusRepository.GetByMotoIdAsync(motoId, paginationParams);
             if (statusList == null || !statusList.Items.Any())

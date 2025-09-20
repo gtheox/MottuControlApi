@@ -7,7 +7,7 @@ namespace MottuControlApi.Services.Contracts
 {
     public interface ISensorService
     {
-        Task<PagedList<SensorDto>> GetAllAsync(PaginationParams paginationParams);
+        Task<PagedList<SensorDto>?> GetAllAsync(PaginationParams paginationParams); // <--- MUDANÇA AQUI
         Task<SensorDto?> GetByIdAsync(int id);
         Task<IEnumerable<SensorDto>> GetByTipoAsync(string tipo);
         Task<SensorDto> CreateAsync(CreateSensorDto createDto);

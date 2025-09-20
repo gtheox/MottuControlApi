@@ -18,14 +18,14 @@ namespace MottuControlApi.Services
             _motoRepository = motoRepository;
         }
 
-        public async Task<PagedList<MotoDto>> GetAllAsync(PaginationParams paginationParams)
+        public async Task<PagedList<MotoDto>?> GetAllAsync(PaginationParams paginationParams)
         {
             var motos = await _motoRepository.GetAllAsync(paginationParams);
             if (motos == null || !motos.Items.Any())
                 return null;
 
             var motosDto = motos.Items.Select(m => m.ToDto()).ToList();
-            
+
             return new PagedList<MotoDto>(motosDto, motos.TotalCount, motos.CurrentPage, motos.PageSize);
         }
 
@@ -50,7 +50,7 @@ namespace MottuControlApi.Services
         public async Task<MotoDto> CreateAsync(CreateMotoDto createDto)
         {
             var moto = createDto.ToModel();
-            
+
             await _motoRepository.CreateAsync(moto);
             await _motoRepository.SaveChangesAsync();
 

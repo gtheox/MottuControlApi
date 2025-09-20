@@ -18,7 +18,7 @@ namespace MottuControlApi.Services
             _sensorRepository = sensorRepository;
         }
 
-        public async Task<PagedList<SensorDto>> GetAllAsync(PaginationParams paginationParams)
+        public async Task<PagedList<SensorDto>?> GetAllAsync(PaginationParams paginationParams)
         {
             var sensores = await _sensorRepository.GetAllAsync(paginationParams);
             if (sensores == null || !sensores.Items.Any())

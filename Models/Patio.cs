@@ -19,8 +19,5 @@ namespace MottuControlApi.Models
 
         // Lista de motos alocadas neste pátio
         public ICollection<Moto> Motos { get; set; } = new List<Moto>();
-
-        // Lista de imagens associadas ao pátio
-        public ICollection<ImagemPatio> Imagens { get; set; } = new List<ImagemPatio>();
     }
 }

@@ -29,9 +29,9 @@ namespace MottuControlApi.Repositories
 
         public async Task<Patio?> GetByIdAsync(int id)
         {
+            // A LINHA PROBLEMÁTICA FOI REMOVIDA DAQUI
             return await _context.Patios
                 .Include(p => p.Motos)
-                .Include(p => p.Imagens)
                 .FirstOrDefaultAsync(p => p.Id == id);
         }
 

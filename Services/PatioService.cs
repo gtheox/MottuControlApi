@@ -18,7 +18,7 @@ namespace MottuControlApi.Services
             _patioRepository = patioRepository;
         }
 
-        public async Task<PagedList<PatioDto>> GetAllAsync(PaginationParams paginationParams)
+        public async Task<PagedList<PatioDto>?> GetAllAsync(PaginationParams paginationParams)
         {
             var patios = await _patioRepository.GetAllAsync(paginationParams);
             if (patios == null || !patios.Items.Any())
@@ -44,7 +44,7 @@ namespace MottuControlApi.Services
         public async Task<PatioDto> CreateAsync(CreatePatioDto createDto)
         {
             var patio = createDto.ToModel();
-            
+
             await _patioRepository.CreateAsync(patio);
             await _patioRepository.SaveChangesAsync();
 
