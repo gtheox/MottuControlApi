@@ -82,6 +82,7 @@ Abra o arquivo appsettings.json e altere a OracleConnection para a sua string de
 
 ```bash
 dotnet restore MottuControlApi.csproj
+dotnet tool install --global dotnet-ef OU dotnet tool update --global dotnet-ef //para instalar ou atualizar o ef e evitar erros 
 dotnet ef database update
 ```
 
