@@ -1,4 +1,4 @@
-# 🚀 MottuControlApi
+  # 🚀 MottuControlApi
 
 API RESTful desenvolvida com ASP.NET Core para o gerenciamento inteligente de motos, sensores, status de monitoramento e pátios de estacionamento da empresa Mottu. Este projeto foi construído seguindo as melhores práticas de desenvolvimento, incluindo arquitetura em camadas, injeção de dependência e princípios SOLID.
 
@@ -81,14 +81,14 @@ Abra o arquivo appsettings.json e altere a OracleConnection para a sua string de
 ### 4. Restaurar Dependências e Aplicar Migrations
 
 ```bash
-dotnet restore
+dotnet restore MottuControlApi.csproj
 dotnet ef database update
 ```
 
 ### 5. Executar a Aplicação
 
 ```bash
-dotnet run
+dotnet run MottuControlApi.csproj
 ```
 
 A API estará disponível em https://localhost:7010 (HTTPS) e http://localhost:5012 (HTTP).
