@@ -70,7 +70,7 @@ Essa arquitetura garante um baixo acoplamento entre os componentes, tornando o s
 ### 2. Clonar o projeto
 
 ```bash
-git clone [https://github.com/gtheox/MottuControlApi.git](https://github.com/gtheox/MottuControlApi.git)
+git clone https://github.com/gtheox/MottuControlApi.git
 cd MottuControlApi
 ```
 
