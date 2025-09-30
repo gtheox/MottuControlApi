@@ -1,4 +1,4 @@
-# 🚀 MottuControlApi
+  # 🚀 MottuControlApi
 
 API RESTful desenvolvida com ASP.NET Core para o gerenciamento inteligente de motos, sensores, status de monitoramento e pátios de estacionamento da empresa Mottu. Este projeto foi construído seguindo as melhores práticas de desenvolvimento, incluindo arquitetura em camadas, injeção de dependência e princípios SOLID.
 
@@ -70,7 +70,7 @@ Essa arquitetura garante um baixo acoplamento entre os componentes, tornando o s
 ### 2. Clonar o projeto
 
 ```bash
-git clone [https://github.com/seu-usuario/MottuControlApi.git](https://github.com/seu-usuario/MottuControlApi.git)
+git clone https://github.com/gtheox/MottuControlApi.git
 cd MottuControlApi
 ```
 
@@ -81,14 +81,15 @@ Abra o arquivo appsettings.json e altere a OracleConnection para a sua string de
 ### 4. Restaurar Dependências e Aplicar Migrations
 
 ```bash
-dotnet restore
+dotnet restore MottuControlApi.csproj
+dotnet tool install --global dotnet-ef OU dotnet tool update --global dotnet-ef //para instalar ou atualizar o ef e evitar erros 
 dotnet ef database update
 ```
 
 ### 5. Executar a Aplicação
 
 ```bash
-dotnet run
+dotnet run MottuControlApi.csproj
 ```
 
 A API estará disponível em https://localhost:7010 (HTTPS) e http://localhost:5012 (HTTP).
