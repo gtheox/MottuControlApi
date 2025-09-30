@@ -77,5 +77,21 @@ namespace MottuControlApi.Services
             _motoRepository.Delete(moto);
             return await _motoRepository.SaveChangesAsync();
         }
+
+        public async Task<bool> UpdateLocationAsync(int motoId, UpdateLocationDto locationDto)
+        {
+            var moto = await _motoRepository.GetByIdAsync(motoId);
+            if (moto == null)
+            {
+                return false; // Moto não encontrada
+            }
+
+            moto.Latitude = locationDto.Latitude;
+            moto.Longitude = locationDto.Longitude;
+            moto.UltimaAtualizacaoLocalizacao = DateTime.UtcNow;
+
+            _motoRepository.Update(moto);
+            return await _motoRepository.SaveChangesAsync();
+        }
     }
 }

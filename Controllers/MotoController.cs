@@ -102,7 +102,7 @@ namespace MottuControlApi.Controllers
             var motoAtualizada = await _motoService.UpdateAsync(id, updateDto);
             if (motoAtualizada == null)
                 return NotFound($"Moto com ID {id} não encontrada para atualização.");
-            
+
             return Ok(motoAtualizada);
         }
 
@@ -120,6 +120,32 @@ namespace MottuControlApi.Controllers
             var sucesso = await _motoService.DeleteAsync(id);
             if (!sucesso)
                 return NotFound($"Moto com ID {id} não encontrada para exclusão.");
+
+            return NoContent();
+        }
+
+        // NOVO ENDPOINT PARA O IOT
+        /// <summary>
+        /// Atualiza a localização GPS de uma moto específica.
+        /// </summary>
+        /// <remarks>Este endpoint é para ser consumido por dispositivos IoT.</remarks>
+        /// <param name="id">O ID da moto a ser atualizada.</param>
+        /// <param name="locationDto">Objeto com latitude e longitude.</param>
+        /// <response code="204">Localização atualizada com sucesso.</response>
+        /// <response code="400">Dados de localização inválidos.</response>
+        /// <response code="404">Moto com o ID especificado não encontrada.</response>
+        [HttpPost("{id}/localizacao")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> UpdateLocation(int id, [FromBody] UpdateLocationDto locationDto)
+        {
+            var sucesso = await _motoService.UpdateLocationAsync(id, locationDto);
+
+            if (!sucesso)
+            {
+                return NotFound($"Moto com ID {id} não encontrada.");
+            }
 
             return NoContent();
         }

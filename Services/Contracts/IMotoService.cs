@@ -14,5 +14,6 @@ namespace MottuControlApi.Services.Contracts
         Task<MotoDto> CreateAsync(CreateMotoDto createDto);
         Task<MotoDto?> UpdateAsync(int id, UpdateMotoDto updateDto);
         Task<bool> DeleteAsync(int id);
+        Task<bool> UpdateLocationAsync(int motoId, UpdateLocationDto locationDto);
     }
 }

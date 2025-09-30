@@ -31,6 +31,11 @@ namespace MottuControlApi.Models
         [ForeignKey("Patio")]
         public int PatioId { get; set; }
 
+        public double? Latitude { get; set; }
+        public double? Longitude { get; set; }
+        public DateTime? UltimaAtualizacaoLocalizacao { get; set; }
+
+
         // Navegação: pátio associado à moto
         public Patio Patio { get; set; } = null!;
 

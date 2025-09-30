@@ -50,6 +50,17 @@
             <response code="204">Moto deletada com sucesso.</response>
             <response code="404">Se a moto não for encontrada.</response>
         </member>
+        <member name="M:MottuControlApi.Controllers.MotoController.UpdateLocation(System.Int32,MottuControlApi.Dtos.Moto.UpdateLocationDto)">
+            <summary>
+            Atualiza a localização GPS de uma moto específica.
+            </summary>
+            <remarks>Este endpoint é para ser consumido por dispositivos IoT.</remarks>
+            <param name="id">O ID da moto a ser atualizada.</param>
+            <param name="locationDto">Objeto com latitude e longitude.</param>
+            <response code="204">Localização atualizada com sucesso.</response>
+            <response code="400">Dados de localização inválidos.</response>
+            <response code="404">Moto com o ID especificado não encontrada.</response>
+        </member>
         <member name="M:MottuControlApi.Controllers.PatioController.GetAll(MottuControlApi.Shared.Pagination.PaginationParams)">
             <summary>
             Busca uma lista paginada de pátios.
@@ -341,6 +352,18 @@
             <inheritdoc />
         </member>
         <member name="M:MottuControlApi.Migrations.VersaoFinalRefatorada.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:MottuControlApi.Migrations.AddLocationToMoto">
+            <inheritdoc />
+        </member>
+        <member name="M:MottuControlApi.Migrations.AddLocationToMoto.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:MottuControlApi.Migrations.AddLocationToMoto.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:MottuControlApi.Migrations.AddLocationToMoto.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
     </members>
